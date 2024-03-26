@@ -1,0 +1,518 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+#simpleGridLayout{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      background: blue;
+      padding: 1rem;
+      gap: 0.5rem;
+      height: 100vh;
+}
+.item1{
+      background: gray;
+      grid-column: 1/4;
+}
+.item2 {
+      background: lightgray;
+      grid-column: 1/3;
+}
+.item3 {
+      background: brown;
+      grid-column: 3/4;
+      grid-row: 2/5;
+
+}
+.item4 {
+      background: green;
+      grid-column: 1/3;
+}
+.item5 {
+      background: gold;
+      grid-column: 1/3;
+}
+.item6 {
+      background: yellowgreen;
+      grid-column: 1/4;
+}
+.gridItem{
+      text-align: center;
+}
+/* ============================================= */
+#gridlayout{
+      display: grid;
+      /* grid-template-columns: auto auto auto; */
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 100px auto 50px 100px;
+      background-color: blueviolet;
+      min-height: 50vh;
+      padding: 1rem;
+      gap: 0.5rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      grid-template-areas: "nav nav nav"
+      "content1 content2 content2"
+      "content3 content3 content4"
+      "footer footer footer";
+}
+.item{
+      background-color: lightgray;
+      text-align: center;
+}
+.box1{
+      /* grid-column: 1/4; */
+      /* grid-column: span 3; */
+      /* grid-column-start: 1; */
+      /* grid-column-end: 4; */
+      grid-area: nav;
+}
+.box2{
+      grid-area: content1;
+}
+.box3{
+      /* grid-column: 2/4; */
+      /* grid-column: span 2; */
+      grid-area: content2;
+
+}
+.box4{
+      /* grid-column: 1/3; */
+      /* grid-column: span 2; */
+      grid-area: content3;
+}
+.box5{
+      grid-area: content4;
+}
+.box6{
+      /* grid-column: 1/4; */
+      /* grid-column: span 3; */
+      grid-area: footer;
+}
+/* Iphone SE */
+@media (max-width:667px){
+#gridlayout {
+      display: grid;
+      /* grid-template-columns: auto auto auto; */
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 100px auto auto auto auto 100px;
+      background-color: black;
+      min-height: 50vh;
+      padding: 1rem;
+      gap: 0.5rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      grid-template-areas: "nav"
+      "content1"
+      "content2"
+      "content3"
+      "content4"
+      "footer";
+      }
+}
+/* Iphone XR */
+@media (max-width:896px){
+      #gridlayout{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 5vh auto auto 8vh;
+            min-height: 50vh;
+            padding: 1rem;
+            gap: 0.5rem;
+            background-color: brown;
+            grid-template-areas: "nav nav"
+            "content1 content2"
+            "content3 content4"
+            "footer footer";
+      }
+      .item{
+            background-color: blue;
+            color: white;
+      }
+      .box1{
+            grid-area: nav;
+      }
+      .box2{
+            grid-area: content1;
+      }
+      .box3{
+            grid-area: content2;
+      }
+      .box4{
+            grid-area: content3;
+      }
+      .box5{
+            grid-area: content4;
+      }
+      .box6{
+            grid-area: footer;
+      }
+}
+/* Iphone12 pro */
+@media (max-width:844px){
+      #gridlayout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 5vh auto auto 8vh;
+            min-height: 50vh;
+            padding: 1rem;
+            gap: 0.5rem;
+            background-color: burlywood;
+            grid-template-areas: "nav nav"
+            "content1 content2"
+            "content3 content4"
+            "footer footer";
+      }
+      .item{
+            background-color: black;
+      }
+}
+/* iPhone14 pro max */
+@media (max-width:932px){
+      #gridlayout{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 8vh auto auto 10vh;
+            min-height: 50vh;
+            background-color: chartreuse;
+            gap: 0.5rem;
+            padding: 1rem;
+            grid-template-areas: "nav nav nav"
+            "content1 content2 content2"
+            "content3 content4 content4"
+            "footer footer footer";
+      }
+      .item{
+            background-color: brown;
+      }
+}
+/* Pixel 7 */
+@media (max-width:915px){
+      #gridlayout{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 5vh auto auto 8vh;
+            min-height: 50vh;
+            background-color: chocolate;
+            padding: 1rem;
+            gap: 0.5rem;
+            grid-template-areas: "nav nav nav nav"
+            "content1 content2 content2 content2"
+            "content3 content4 content4 content4"
+            "footer footer footer footer";
+      }
+      .item{
+            background-color: cornflowerblue;
+      }
+}
+/* Samsung Galaxy 58 */
+@media (max-width:740px){
+      #gridlayout{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 4vh auto auto auto auto 4vh;
+            min-height: 50vh;
+            background-color: cornflowerblue;
+            padding: 1rem;
+            gap: 0.5rem;
+            grid-template-areas: "nav nav"
+            "content1 content1"
+            "content2 content2"
+            "content3 content3"
+            "content4 content4"
+            "footer footer";
+      }
+      .item{
+            background-color: coral;
+      }
+}
+/* Ipad Mini */
+@media (max-width:1024px){
+      #gridlayout{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 5vh auto auto 8vh;
+            min-height: 50vh;
+            background-color: crimson;
+            padding: 1rem;
+            gap: 0.5rem;
+            grid-template-areas: "nav nav nav nav nav"
+            "content1 content2 content2 content2 content2"
+            "content3 content4 content4 content4 content4"
+            "footer footer footer footer footer";
+      }
+      .item{
+            background-color: cornsilk;
+            color: black;
+      }
+      /* Ipad Air */
+      @media (max-width:1180px){
+            #gridlayout{
+                  display: grid;
+                  grid-template-columns: repeat(6, 1fr);
+                  grid-template-rows: 5vh auto auto 8vh;
+                  min-height: 50vh;
+                  background-color: darkblue;
+                  padding: 1rem;
+                  gap: 0.5rem;
+                  grid-template-areas: "nav nav nav nav nav nav"
+                  "content1 content2 content2 content2 content2 content2"
+                  "content3 content3 content3 content4 content4 content4"
+                  "footer footer footer footer footer footer";
+            }
+            .item{
+                  background-color: cyan;
+            }
+      }
+}
+/* Ipad pro */
+@media (max-width:1366px){
+      #gridlayout{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: 5vh 15vh 20vh 10vh;
+            min-height: 50vh;
+            background-color: darkcyan;
+            padding: 1rem;
+            gap: 0.5rem;
+            grid-template-areas: "nav nav nav nav nav nav nav nav"
+            "content1 content2 content2 content2 content2 content2 content2 content3"
+            "content4 content4 content4 content4 content4 content4 content4 content4"
+            "footer footer footer footer footer footer footer footer";
+      }
+      .item{
+            background-color: darkgoldenrod;
+      }
+}
+ /* ============================================= */
+ /* Large Laptop Screen */
+
+ @media (max-width:1440px){
+      #parentLayout{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 2rem auto auto auto 2rem 4rem;
+            min-height: 50vh;
+            background-color: gray;
+            padding: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            grid-template-areas: "nav nav nav nav"
+            "body1 body2 body2 body2"
+            "body1 body3 body3 body3"
+            "body1 body4 body4 body4"
+            "body5 body5 body6 body6"
+            "footer footer footer footer";
+      }
+      .step{
+            background-color: blue;
+            text-align: center;
+            color: white;
+            border-radius: 0.4rem;
+            border: 0.15rem solid red;
+      }
+      .stage1{
+            grid-area: nav;
+            animation: scale;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+      }
+      .stage2{
+            grid-area: body1;
+            grid-row: 2/5;
+            animation: scale;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+      }
+      .stage3{
+            grid-area: body2;
+            animation: scale;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+      }
+      .stage4{
+            grid-area: body3;
+            animation: scale;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+      }
+      .stage5{
+            grid-area: body4;
+            animation: scale;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+      }
+      .stage6{
+            grid-area: body5;
+            animation: scale;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+      }
+      .stage7{
+            grid-area: body6;
+            animation: scale;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+      }
+      .stage8{
+            grid-area: footer;
+            animation: scale;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+      }
+      @keyframes scale{
+            50%{
+                transform: scale(0.7, 0.7);
+                border: 0.1rem solid white;
+            }
+      }
+ }
+ /* Medium Laptop Screen */
+
+ @media (max-width:1024px){
+      #parentLayout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 2rem auto auto auto 2rem 4rem;
+            min-height: 50vh;
+            background-color: green;
+            padding: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            grid-template-areas: "nav nav nav nav"
+            "body1 body2 body2 body2"
+            "body1 body3 body3 body3"
+            "body1 body4 body4 body4"
+            "body5 body5 body6 body6"
+            "footer footer footer footer";
+     }
+      .step {
+            background-color: gray;
+            text-align: center;
+            color: white;
+            border-radius: 0.4rem;
+            border: 0.15rem solid red;
+      }
+ }
+ /* Tablet */
+
+ @media (max-width:768px){
+      #parentLayout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 2rem auto auto auto 2rem 4rem;
+            min-height: 50vh;
+            background-color: yellowgreen;
+            padding: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            grid-template-areas: "nav nav nav nav"
+            "body1 body2 body2 body2"
+            "body1 body3 body3 body3"
+            "body1 body4 body4 body4"
+            "body5 body5 body6 body6"
+            "footer footer footer footer";
+      }
+      
+      .step {
+            background-color: darkolivegreen;
+            text-align: center;
+            color: white;
+            border-radius: 0.4rem;
+            border: 0.15rem solid red;
+      }
+ }
+ /* Mobile Large Screen */
+
+ @media (max-width:425px){
+      #parentLayout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 2rem auto auto auto 2rem 4rem;
+            min-height: 50vh;
+            background-color: burlywood;
+            padding: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            grid-template-areas: "nav nav nav nav"
+            "body1 body2 body2 body2"
+            "body1 body3 body3 body3"
+            "body1 body4 body4 body4"
+            "body5 body5 body6 body6"
+            "footer footer footer footer";
+      }
+      
+      .step {
+            background-color: darkolivegreen;
+            text-align: center;
+            color: white;
+            border-radius: 0.4rem;
+            border: 0.15rem solid red;
+      }
+ }
+ /* Mobile Medium Screen */
+
+ @media (max-width:375px){
+      #parentLayout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 2rem auto auto auto 2rem 4rem;
+            min-height: 50vh;
+            background-color: cornsilk;
+            padding: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            grid-template-areas: "nav nav nav nav"
+            "body1 body2 body2 body2"
+            "body1 body3 body3 body3"
+            "body1 body4 body4 body4"
+            "body5 body5 body6 body6"
+            "footer footer footer footer";
+      }
+
+      .step {
+            background-color: cornflowerblue;
+            text-align: center;
+            color: black;
+            border-radius: 0.4rem;
+            border: 0.15rem solid red;
+      }
+}
+/* Mobile Small Screen */
+
+@media (max-width:320){
+      #parentLayout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 2rem auto auto auto 2rem 4rem;
+            min-height: 50vh;
+            background-color: fuchsia;
+            padding: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            grid-template-areas: "nav nav nav nav"
+            "body1 body2 body2 body2"
+            "body1 body3 body3 body3"
+            "body1 body4 body4 body4"
+            "body5 body5 body6 body6"
+            "footer footer footer footer";
+      }
+
+      .step {
+            background-color: forestgreen;
+            text-align: center;
+            color: cornflowerblue;
+            border-radius: 0.4rem;
+            border: 0.15rem solid red;
+      }
+}
